@@ -2,12 +2,17 @@
 
 <p>
   <strong>Quote:</strong>
-  <%= @favorite_quote.quote %>
+  <%= @favorite_quote.quote.text %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @favorite_quote.quote.author %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @favorite_quote.user %>
+  <%= @favorite_quote.user.name %>
 </p>
 
 <%= link_to 'Edit', edit_favorite_quote_path(@favorite_quote) %> |

@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Quote</th>
+      <th>Author</th>
       <th>User</th>
       <th></th>
       <th></th>
@@ -14,8 +15,9 @@
   <tbody>
     <% @favorite_quotes.each do |favorite_quote| %>
       <tr>
-        <td><%= favorite_quote.quote %></td>
-        <td><%= favorite_quote.user %></td>
+        <td><%= favorite_quote.quote.text %></td>
+        <td><%= favorite_quote.quote.author %></td>
+        <td><%= favorite_quote.user.name %></td>
         <td><%= link_to 'Show', favorite_quote %></td>
         <td><%= link_to 'Edit', edit_favorite_quote_path(favorite_quote) %></td>
         <td><%= link_to 'Destroy', favorite_quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
