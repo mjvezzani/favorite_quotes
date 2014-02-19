@@ -10,6 +10,7 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
 end
 
 # Use sqlite3 as the database for Active Record
