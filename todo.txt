@@ -1,0 +1,16 @@
+--== Project Todo's and Explanations ==--
+
+QOTD Model:
+
+  - id: integer
+  - quote_id: foreign_key_from_Quote_model
+  - scheduled_post_date: time
+  
+
+Controller logic:
+
+  - quote = QOTD.scheuled_post_date => 2014-03-01 00:00:00
+  - @quote = QOTD.find_by(schedule_post_date: Time.now)
+  - if Time.now.strftime(%H:%m:%S) = 00:00:00
+  -   @qotd = QOTD.find_by(scheduled_post_date: Time.now.strftime(%H:%m:%S))
+  - end
